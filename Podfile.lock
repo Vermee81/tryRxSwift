@@ -4,23 +4,27 @@ PODS:
   - RxSwift (4.5.0)
   - RxTest (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
+  - SwiftFormat/CLI (0.40.8)
 
 DEPENDENCIES:
   - RxCocoa (~> 4.5)
   - RxSwift (~> 4.5)
   - RxTest (~> 4.5)
+  - SwiftFormat/CLI (~> 0.40.8)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RxCocoa
     - RxSwift
     - RxTest
+    - SwiftFormat
 
 SPEC CHECKSUMS:
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   RxTest: 3ccb66bfbace0bf7df1c43a7c75d046f8ce60372
+  SwiftFormat: d9e5ca1aed735164fe9d26510ec508ddb8a93598
 
-PODFILE CHECKSUM: fa27e74344856400e55991581970efa5216f8920
+PODFILE CHECKSUM: 0ed58e719a7f1acc8149ab3f4a427451f851913d
 
 COCOAPODS: 1.6.1

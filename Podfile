@@ -8,6 +8,7 @@ target 'tryRxSwift' do
   # Pods for tryRxSwift
   pod 'RxSwift', '~> 4.5'
   pod 'RxCocoa', '~> 4.5'
+  pod 'SwiftFormat/CLI', '~> 0.40.8'
 
   target 'tryRxSwiftTests' do
     inherit! :search_paths

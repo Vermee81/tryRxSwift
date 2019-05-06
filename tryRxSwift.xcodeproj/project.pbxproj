@@ -125,7 +125,6 @@
 				5D823BEF46D512002F70DF28 /* Pods-tryRxSwiftTests.debug.xcconfig */,
 				E43A5D7B8ADF5536CEEC59CB /* Pods-tryRxSwiftTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,6 +159,7 @@
 				14FC8BAB2280153F00EC0030 /* Frameworks */,
 				14FC8BAC2280153F00EC0030 /* Resources */,
 				DCD68BF2C07C3BA8E61ABC69 /* [CP] Embed Pods Frameworks */,
+				1499330D22803B15003C889F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +253,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tryRxSwift/Pods-tryRxSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		1499330D22803B15003C889F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --trimwhitespace nonblank-lines --stripunusedargs closure-only --disable strongOutlets,trailingCommas\n";
 		};
 		A7C2841D6D2BCE1F52328028 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
