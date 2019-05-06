@@ -6,6 +6,7 @@
 //  Copyright © 2019年 Hiroo Kusaba. All rights reserved.
 //
 
+import RxTest
 @testable import tryRxSwift
 import XCTest
 
@@ -28,5 +29,23 @@ class tryRxSwiftTests: XCTestCase {
         measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testDebounce() {
+        let scheduler = TestScheduler(initialClock: 0)
+        
+        let observable = scheduler.createHotObservable([
+            Recorded.next(1, "R"),
+            Recorded.next(2, "Rx"),
+            Recorded.next(4, "RxS"),
+            Recorded.next(5, "RxSw"),
+            Recorded.next(6, "RxSwi"),
+            Recorded.next(7, "RxSwift")
+        ])
+        
+        _ = observable
+            .debounce(1, scheduler: scheduler)
+            .subscribe(onNext: { print("onNext: ", $0) })
+        scheduler.start()
     }
 }
